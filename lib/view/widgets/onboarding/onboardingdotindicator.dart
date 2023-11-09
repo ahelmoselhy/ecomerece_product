@@ -13,20 +13,48 @@ class OnBoardingDotsIndicators extends StatelessWidget {
       builder: (controller) => Row(
         children: [
           ...List.generate(
-            onBoardinglist.length,
-            (index) => AnimatedContainer(
-              margin: const EdgeInsets.only(right: 5),
-              duration: const Duration(microseconds: 900),
-              width: index == controller.currentPage ? 16 : 8,
-              height: 8,
-              decoration: BoxDecoration(
-                color: index == controller.currentPage
-                    ? AppColor.dotsActiveColor
-                    : AppColor.dotsUnActiveColor,
-                borderRadius: BorderRadius.circular(10),
-              ),
-            ),
-          )
+              onBoardinglist.length,
+              (index) => AnimatedContainer(
+                    margin: const EdgeInsets.only(right: 5),
+                    duration: const Duration(microseconds: 900),
+                    width: index == controller.currentPage ? 12 : 6,
+                    height: 6,
+                    decoration: BoxDecoration(
+                      color: index == controller.currentPage
+                          ? AppColor.dotsActiveColor
+                          : AppColor.dotsUnActiveColor,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                  )
+              // (index) => index == controller.currentPage
+              //     ? Container(
+              //         alignment: Alignment.center,
+              //         padding: EdgeInsets.all(2),
+              //         decoration: BoxDecoration(
+              //           color: AppColor.backgroundColor,
+              //           borderRadius: BorderRadius.circular(10),
+              //         ),
+              //         child: AnimatedContainer(
+              //           duration: const Duration(microseconds: 900),
+              //           width: 8,
+              //           height: 8,
+              //           decoration: BoxDecoration(
+              //             color: AppColor.dotsActiveColor,
+              //             borderRadius: BorderRadius.circular(10),
+              //           ),
+              //         ),
+              //       )
+              //     : AnimatedContainer(
+              //         margin: const EdgeInsets.only(right: 5),
+              //         duration: const Duration(microseconds: 900),
+              //         width: 8,
+              //         height: 8,
+              //         decoration: BoxDecoration(
+              //           color: AppColor.dotsUnActiveColor,
+              //           borderRadius: BorderRadius.circular(10),
+              //         ),
+              //       ),
+              )
         ],
       ),
     );

@@ -33,7 +33,7 @@ class OnBoardingPageView extends GetView<OnBoardingControllerImp> {
                 height: 16,
               ),
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 20),
+                padding: const EdgeInsets.symmetric(horizontal: 20),
                 width: double.infinity,
                 alignment: Alignment.center,
                 child: Text(

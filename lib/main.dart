@@ -3,6 +3,7 @@ import 'package:ecomerece_product/core/localization/localecontroller.dart';
 import 'package:ecomerece_product/core/localization/translation.dart';
 import 'package:ecomerece_product/core/services/myservices.dart';
 import 'package:ecomerece_product/routs.dart';
+import 'package:ecomerece_product/view/screens/home/home.dart';
 import 'package:ecomerece_product/view/screens/language/lanuage.dart';
 import 'package:ecomerece_product/view/screens/onboarding/onboarding.dart';
 import 'package:flutter/material.dart';
@@ -46,7 +47,7 @@ class MyApp extends StatelessWidget {
                   color: AppColor.grey,
                   fontSize: 16,
                   fontWeight: FontWeight.normal))),
-      home: const Language(),
+      home: const SafeArea(child: Home()),
       routes: routes,
     );
   }
